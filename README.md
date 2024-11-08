@@ -21,10 +21,7 @@ Se cumplió con todos los requisitos de la actividad.
 
 La arquitectura se basa en la replicación de pods con imágenes de componentes de software que entre sí aseguran la alta disponbilidad constante en la aplicación.
 
-De esta manera, se crean n réplicas del CMS (Wordpress), m réplicas del balanceador de carga, y, por medio de mecanismos empleados por EFS para la replicación de datos, se garantiza la consistencia de la información alojada en el sistema.
-
-![image](https://github.com/user-attachments/assets/4d13eedc-7bbf-4fe5-92c3-3f2af98ba31b)
-Imagen obtenida de <a href="https://aws.amazon.com/blogs/storage/running-wordpress-on-amazon-eks-with-amazon-efs-intelligent-tiering/">despliegue de referencia con Wordpress</a> 
+Se crea dentro del cluster servicios de Mysql, Wordpress y Nginx para la base de datos, muestra de informacion y balanceo de carga respectivamente. Por fuera del cluster se encuentra la instancia nfs con el almacenamiento persistente tanto de la base de datos como del contenido de la página.
 
 # 3. Descripción del ambiente de desarrollo y técnico: lenguaje de programación, librerias, paquetes, etc, con sus numeros de versiones.
 
